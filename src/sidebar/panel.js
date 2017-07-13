@@ -151,7 +151,6 @@ closeButton.addEventListener('click', () => {
 });
 
 enableSync.onclick = () => {
-  noteDiv.classList.toggle('visible');
   browser.runtime.sendMessage({ action: 'authenticate' });
 };
 
@@ -169,4 +168,18 @@ const qlEditor = document.querySelectorAll('.ql-editor');
 qlEditor[0].addEventListener('drop', (e) => {
   e.preventDefault();
   return false;
+});
+
+chrome.runtime.onMessage.addListener(eventData => {
+  switch (eventData.action) {
+    case 'authenticated':
+      if (eventData.err) {
+        enableSync.textContent = 'Login Failed...';
+      } else if (eventData.bearer) {
+        enableSync.textContent = 'Synced';
+        enableSync.disabled = true;
+      }
+
+      break;
+  }
 });
