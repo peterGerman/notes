@@ -29,7 +29,7 @@
 
   "background": {
     "scripts": [
-      "vendor/dist/FxaCrypto.relier.js",
+      "vendor/FxaCrypto.relier.min.js",
       "vendor/testpilot-metrics.js",
       "background.js"
     ]

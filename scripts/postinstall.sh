@@ -5,6 +5,7 @@ set -e
 cp node_modules/testpilot-metrics/testpilot-metrics.js src/vendor
 cp node_modules/quill/dist/quill.min.js src/sidebar/vendor/quill.js
 cp node_modules/quill/dist/quill.snow.css src/sidebar/vendor
+cp node_modules/fxa-crypto-relier/dist/FxaCrypto.relier.min.js src/vendor
 
 # Copy the 3rd party LICENSE files.
 cp node_modules/quill/LICENSE src/sidebar/vendor/quill.LICENSE
