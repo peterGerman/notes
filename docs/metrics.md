@@ -34,6 +34,7 @@ Data will be collected with Google Analytics and follow [Test Pilot standards](h
 - `cd6` - whether the user has, anywhere in their notepad, a list. One of `true` or `false`.
 - `cd7` - the UI element used to open or close the notepad. Possible values TBD, but may include `closeButton`, `sidebarButton`, and `sidebarSwitcher`.
 - `cd8` - the reason an editing session ended. One of `timeout` or `closed`.
+- 'cd9' - the environment the user is in. One of 'dev', 'stage', or 'prod'
 
 ### Events
 
@@ -51,6 +52,7 @@ An event fired when the user actively navigates to the Notes sidebar. Includes:
 - `cd5`
 - `cd6`
 - `cd7`
+- 'cd9' - the environment the user is in. One of 'dev', 'stage', or 'prod'
 
 #### `close`
 An event fired when the user actively navigates away from the Notes sidebar. Includes:
@@ -66,6 +68,7 @@ An event fired when the user actively navigates away from the Notes sidebar. Inc
 - `cd5`
 - `cd6`
 - `cd7`
+- 'cd9' - the environment the user is in. One of 'dev', 'stage', or 'prod'
 
 #### `changed`
 An event fired when the user completes a change of the content of the notepad. It prospectively begins when a user focuses on the notepad's editable area, and ends when the user either 1) closes the sidebar, or 2) does not make any changes in 20 seconds. Includes:
@@ -83,6 +86,8 @@ An event fired when the user completes a change of the content of the notepad. I
 - `cd6`
 - `cd7`
 - `cd8`
+- 'cd9' - the environment the user is in. One of 'dev', 'stage', or 'prod'
+
 
 #### `drag-n-drop`
 
@@ -101,6 +106,8 @@ An event fired when the user tries to drag or drop a content into the notepad.
 - `cd6`
 - `cd7`
 - `cd8`
+- 'cd9' - the environment the user is in. One of 'dev', 'stage', or 'prod'
+
 
 #### `sync-started`
 An event fired whenever the user attempts to login to sync. Includes:
@@ -115,6 +122,8 @@ An event fired whenever the user attempts to login to sync. Includes:
 - `cd4`
 - `cd5`
 - `cd6`
+- 'cd9' - the environment the user is in. One of 'dev', 'stage', or 'prod'
+
 
 #### `sync-enabled`
 An event fired whenever the user enables sync. Includes:
@@ -129,6 +138,8 @@ An event fired whenever the user enables sync. Includes:
 - `cd4`
 - `cd5`
 - `cd6`
+- 'cd9' - the environment the user is in. One of 'dev', 'stage', or 'prod'
+
 
 #### `sync-disabled`
 An event fired whenever the user disables sync. Includes:
@@ -143,3 +154,5 @@ An event fired whenever the user disables sync. Includes:
 - `cd4`
 - `cd5`
 - `cd6`
+- 'cd9' - the environment the user is in. One of 'dev', 'stage', or 'prod'
+
